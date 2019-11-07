@@ -1,0 +1,79 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../CSS/cifrar.css">
+    <link rel="icon" type="image/jpg" href="../Images/6.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <title>Mensaje secreto</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo_image">
+            <img src="../Images/2.png" width="60" height="60" alt="">
+        </div>
+    </nav>
+    <div class="main_section">
+        <h1>
+            Elige cuantos espacios quieres desplazar:
+        </h1>
+    </div>
+
+    <div class="container">
+        <div class="dropdown">
+            <button class="dropbtn" id="desplazar">Desplazar</button>
+            <div class="dropdown-content">
+                <a onclick="onClickDesplazamiento(event)" id="1" href="#">1</a>
+                <a onclick="onClickDesplazamiento(event)" id="5" href="#">5</a>
+                <a onclick="onClickDesplazamiento(event)" id="10" href="#">10</a>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="caja-texto">
+        <input type="text" id=cajaCifrar class="caja" value="">
+        <input type="text" id=cajaCifrada class="caja" value=""><br>
+        </form>
+    </div>
+
+
+    <div class="botonesCentro">
+        <input type="submit" class="cifrar" onclick="onClickcode(event)" value="Cifrar">
+        <input type="submit" class="descifrar" onclick="onClickdecode(event)" value="Descifrar">
+    </div>
+
+
+    <div class="fondo">
+        <div class="boton-contenedor">
+            <button class="ayuda" id="ayuda">Ayuda</button>
+
+            <button class="ayuda"><a href="../index.html">Volver</a></button>
+        </div>
+
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <h2>¿Cómo cifrar y descifrar?</h2>
+            <h3>*Para cifrar un mensaje lo primero que debes hacer es elegir un número de desplazamientos, escribir tu mensaje secreto en él primer recuadro y por ultimo oprimir el botón "Cifrar" *Para descifrar un mesaje elige un número de desplazamientos,
+                escribe tu mensaje en el segundo recuadro y oprime el botón "Descifrar"
+                <br>
+                <br>
+            </h3>
+            <form action="">
+
+            </form>
+        </div>
+
+    </div>
+
+    <script src="../JS/cipher.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+html,
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: px;
+    font-family: ;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    background-color: #E4CA27;
+    padding: 10px;
+    color: black
+}
+
+.main_section {
+    margin-top: 0%;
+    padding: 5%;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 25px;
+    color: #42C6C2;
+}
+
+.texto {
+    margin-top: 0%;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 22px;
+    color: #707070;
+}
+
+.detective {
+    background-image: url("../Images/inferior.png");
+    height: 700px;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 1%;
+    display: flex;
+}
+
+.boton_personalizado {
+    padding: 20px;
+    font-weight: 800;
+    font-size: 23px;
+    color: #707070;
+    background-color: #8DC642;
+    border-radius: 6px;
+}
