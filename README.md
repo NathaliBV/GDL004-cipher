@@ -12,10 +12,12 @@
 
 ## 1. Resumen del proyecto 👩‍💻
 
-<img src="../Images/2.png">
+El proyecto "Cipher" tiene como objetivo principal desarrollar dos funciones
+"code" y "decode", 
 
 ## 2. Imagen final del proyecto 📲
 
+![](src/Images/Grupo%204.png)
 
 
 ## 3. Investigación UX 🔍
