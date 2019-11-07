@@ -43,9 +43,9 @@ con el producto.
   ![](src/Images/Boceto.png)
 
   4. Feedback:
-  Trabajar más en el archivo JS.
-  Cuidar las buenas practicas en el código.
-  Diseño limpio y funcional.
+  * Trabajar más en el archivo JS.
+  * Cuidar las buenas practicas en el código.
+  * Diseño limpio y funcional.
 
 ## 4. Imagen del prototipo final 🎨✏️
 
