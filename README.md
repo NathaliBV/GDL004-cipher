@@ -17,17 +17,23 @@ El proyecto "Cipher" tiene como objetivo principal desarrollar dos funciones
 
 ## 2. Imagen final del proyecto 📲
 
-![](src/Images/Grupo%204.png)
+![](src/Images/Final1.png)
+![](src/Images/Final2.png)
+
 
 
 ## 3. Investigación UX 🔍
 
-  1. Explicar quiénes son los usuarios y los objetivos en relación con el
-    producto.
+  1. Usuarios:
+  Este proyecto está dirigido a niños de entre 6años a 10 años, con el objetivo
+  de fomentar la lectura, la comunicación y la interacción con otros niños o
+  familiares de una forma divertida: ¡enviandose mensajes secretos!
   2. Explicar cómo el producto soluciona los problemas/necesidades de dichos
     usuarios.
-  3. Luego colocarás la foto de tu primer prototipo en papel.
-  4. Agregar un resumen del feedback recibido indicando las mejoras a realizar.
+  3. Foto del primer prototipo en papel:
+  ![](src/Images/Boceto.png)
+  4. Feedback:
 
 ## 4. Imagen del prototipo final 🎨✏️
-
+![](src/Images/Grupo%204.png)
+![](src/Images/Grupo%205.png)
