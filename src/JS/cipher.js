@@ -2,24 +2,24 @@
 
 var btnAbrirPopup = document.getElementById("ayuda"),
     overlay = document.getElementById("overlay"),
-    popup = document.getElementById("popup"),
+    //popup = document.getElementById("popup"),
     btnCerrarPopup = document.getElementById("btn-cerrar-popup");
 
 btnAbrirPopup.addEventListener("click", function() {
     overlay.classList.add("active");
-})
+});
 
 btnCerrarPopup.addEventListener("click", function() {
     overlay.classList.remove("active");
-})
+});
 
 //Desplazamiento
 
-var desplazamiento = 0
+var desplazamiento = 0;
 
 function onClickDesplazamiento(event) {
-    event.preventDefault()
-    desplazamiento = parseInt(event.target.id)
+    event.preventDefault();
+    desplazamiento = parseInt(event.target.id);
 }
 
 //Cifrar
@@ -27,34 +27,34 @@ function onClickDesplazamiento(event) {
 function cifrarUnaLetra(desplazamiento, cadena) {
 
     var asciiNumero =
-        cadena.charCodeAt(0)
+        cadena.charCodeAt(0);
     var asciiNuevoNumero =
-        (asciiNumero - 65 + desplazamiento) % 26 + 65
-    return String.fromCharCode(asciiNuevoNumero)
+        (asciiNumero - 65 + desplazamiento) % 26 + 65;
+    return String.fromCharCode(asciiNuevoNumero);
 }
 
 function code(desplazamiento, cadena) {
-    var arregloVacio = []
+    var arregloVacio = [];
     for (var i = 0; i < cadena.length; i++) {
-        arregloVacio.push(cifrarUnaLetra(desplazamiento, cadena[i].toUpperCase()))
-        if (cadena.length === 32) {
-            arregloVacio.push(32)
-        }
+        arregloVacio.push(cifrarUnaLetra(desplazamiento, cadena[i].toUpperCase()));
+        //if (cadena.length === 32) {
+        //  arregloVacio.push(32);
+        //}
     }
-    //alert(arregloVacio.join(""))
-    document.getElementById("cajaCifrada").value = arregloVacio.join("").toUpperCase()
+    return arregloVacio.join("").toUpperCase();
 }
 
 
 function onClickcode(event) {
-    event.preventDefault()
-    code(desplazamiento, document.getElementById("cajaCifrar").value)
+    event.preventDefault();
+    var resultado = code(desplazamiento, document.getElementById("cajaCifrar").value);
+    document.getElementById("cajaCifrada").value = resultado;
 }
 
 //Descifrar
 
 function descifrarUnaLetra(desplazamiento, cadena) {
-    ABC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " "]
+    var ABC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " "];
     var abecedario = {
         "A": 0,
         "B": 1,
@@ -83,26 +83,36 @@ function descifrarUnaLetra(desplazamiento, cadena) {
         "Y": 24,
         "Z": 25,
         " ": 26,
-    }
-    var valorLetra = abecedario[cadena.toUpperCase()]
-    var nuevaLetra = (valorLetra - desplazamiento) % 27
+    };
+    var valorLetra = abecedario[cadena.toUpperCase()];
+    var nuevaLetra = (valorLetra - desplazamiento) % 27;
     if (nuevaLetra < 0) {
-        nuevaLetra = 27 + nuevaLetra
+        nuevaLetra = 27 + nuevaLetra;
     }
-    return ABC[nuevaLetra]
+    return ABC[nuevaLetra];
 }
 
 function decode(desplazamiento, cadena) {
-    var arregloVacio = []
+    var arregloVacio = [];
     for (var i = 0; i < cadena.length; i++) {
-        arregloVacio.push(descifrarUnaLetra(desplazamiento, cadena[i].toUpperCase()))
+        arregloVacio.push(descifrarUnaLetra(desplazamiento, cadena[i].toUpperCase()));
     }
-    //alert(arregloVacio.join(""))
-    document.getElementById("cajaCifrar").value = arregloVacio.join("").toUpperCase()
+    return arregloVacio.join("").toUpperCase();
 }
 
 
 function onClickdecode(event) {
-    event.preventDefault()
-    decode(desplazamiento, document.getElementById("cajaCifrada").value)
+    event.preventDefault();
+    var resultado = decode(desplazamiento, document.getElementById("cajaCifrada").value);
+    document.getElementById("cajaCifrar").value = resultado;
 }
+
+window.cipher = {
+    onClickDesplazamiento: onClickDesplazamiento,
+    cifrarUnaLetra: cifrarUnaLetra,
+    code: code,
+    onClickcode: onClickcode,
+    descifrarUnaLetra: descifrarUnaLetra,
+    decode: decode,
+    onClickdecode: onClickdecode
+};
